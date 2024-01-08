@@ -1,0 +1,6 @@
+upload/test.py
+upload/.env
+upload/id_rsa
+upload/media
+upload/db.sqlite3
+upload/.dockerignore

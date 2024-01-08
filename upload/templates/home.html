@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lipa backend</title>
+</head>
+<body>
+    <p><h1>this is Lipa_Backend the base url is http://100.25.166.226:8090 </h1></p>
+    <p> for documentation by <a href=>jobugua97@gmail.com</a></p>
+   <hr>
+   <h3><ol>
+   <li>registering a user/client</li>
+   <p>you will need to call this endpoint to register a user <a href="http://100.25.166.226:8090/user/register">click here</a> or  http://100.25.166.226:8090/user/register</p>
+   <p>data to pass is <ol><li>name (char)</li><li>phone(char)</li><li>password(char)</li></ol></p>
+   <p>example</p>
+   <textarea>
+    {
+        "phone":"+254------",
+        "name":"johndoe",
+        "password":"johndoe'S"
+    }
+   </textarea>
+   
+   <li>deregistering a user/client</li>
+   <p>you will need to call this endpoint to deregister a user <a href="http://100.25.166.226:8090/user/deregister">click here</a> or  http://100.25.166.226:8090/user/deregister </p>
+   <p>data to pass is <ol><li>phone(char)</li></li></ol></p>
+   <p>example</p>
+   <textarea>
+    {
+        "phone":"+254------",
+    }
+   </textarea>
+
+
+   <li>update a user/client credentials</li>
+   <p>you will need to call this endpoint to update a user <a href="http://100.25.166.226:8090/user/update">click here</a> or  http://100.25.166.226:8090/user/update </p>
+
+   <p>data to pass is <ol><li>phone(char)</li></li></ol></p>
+   <p>example</p>
+   <textarea>
+    {
+        "phone":"+254------",
+    }
+   </textarea>
+
+
+   <li>login in a user/client</li>
+   <p>you will need to call this endpoint to login a user <a href="http://100.25.166.226:8090/user/login">click here</a> or http://100.25.166.226:8090/user/login  </p>
+   <p>data to pass is <ol><li>phone(char)</li><li>name</li><li>password</li></ol></p>
+   <p>example</p>
+
+   <textarea>
+    
+{
+    "name":".....",
+    "phone":".....",
+    "password":"....."
+    
+}
+   </textarea>
+<h4 style="color: red;">after login you will recive Json Responce a token that will be used for session management expires after 10 mins</h4>
+
+   <li>fetch  a user/client data</li>
+   <p>you will need to call this endpoint to fetch a user profile photo<a href="http://100.25.166.226:8090/profilephoto/get">click here</a> or  http://100.25.166.226:8090/profilephoto/get"  </p>
+   <p>data to pass is <ol><li>token(char)</li></ol></p>
+   <p>example</p>
+
+   <textarea>
+    {
+        "token":"johndoetoken@#",
+    }
+    </textarea>
+    <p style="color: red;">you will recive a storage url he last uploaded profile photo if exists</p>
+   <li>post a user profile photo</li>
+   <p>you will need to call this endpoint to register add a profile photo <a href="http://100.25.166.226:8090/profilephoto/upload">click here</a> or  http://100.25.166.226:8090/profilephoto/upload </p>
+   </ol>
+   <li>mpesa</li>
+   <li>mpesa stk confirm</li>
+   <li>mpesa callback</li>
+   <h3>
+<h4><a href="http://100.25.166.226:8090/admin">database</a>password:123,username:admin</h4>
+</body>
+</html>
